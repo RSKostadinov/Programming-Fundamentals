@@ -41,6 +41,8 @@ internal class Program
 
             }
         }
+
+        Console.WriteLine($"Your password is: {password}");
     }
 
     private static StringBuilder TakeOdd(StringBuilder password)
