@@ -1,12 +1,33 @@
 ﻿using System;
-
-namespace P09PalindromeIntegers
+internal class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        string input;
+        while ((input = Console.ReadLine()) != "END")
         {
-            Console.WriteLine("Hello World!");
+            int number = int.Parse(input);
+            bool isPalindrome = IsPalindrome(number);
+            Console.WriteLine(isPalindrome ? "true": "false");
         }
+
+    }
+    public static bool IsPalindrome(int number)
+    {
+        string numberString = number.ToString();
+        int left = 0;
+        int right = numberString.Length - 1;
+
+        while (left < right)
+        {
+            if (numberString[left] != numberString[right])
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 }
+

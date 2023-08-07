@@ -1,12 +1,22 @@
 ﻿using System;
 
-namespace P07NxNMatrix
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int n = int.Parse(Console.ReadLine());
+        NxNMatrix(n);
+    }
+    public static void NxNMatrix(int n)
+    {
+        for (int i = 0; i < n; i++)
         {
-            Console.WriteLine("Hello World!");
+            for (int j = 1; j < n; j++)
+            {
+                Console.Write(n + " ");
+            }
+            Console.WriteLine(n);
         }
     }
 }
+
